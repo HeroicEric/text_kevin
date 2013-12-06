@@ -7,8 +7,9 @@ get '/' do
 end
 
 post '/messages' do
+  body = params[:body]
   messager = Messager.new
-  messager.send_text("Hello.")
+  messager.send_text(body)
 
   redirect '/'
 end

@@ -1,4 +1,10 @@
 %h1 Don't Press The Button
 
 %form{action: '/messages', method: 'post'}
-  %button PRESS ME
+  .input
+    %p
+      %label{for: 'body'} What?
+    %textarea{name: "body"}
+
+  .input
+    %button PRESS ME
